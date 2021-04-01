@@ -1,10 +1,12 @@
 # 競馬予想AI
 ### 作品概要
-WEBスクレイピンで10年分のレースデータを収集して、そのデータで訓練したモデルを使って、単勝馬番を予想します。レース30分前、WEBサイトに公開します。Android版はWebAPIを使ってWEBサーバにHTTPリクエストします。【使用言語】PHP、JavaScrip、Python、Kotlin【機械学習に使ったフレームワーク】LightGBM【サーバ構築】AWS EC2 Linuxインスタンス
+WEBスクレイピンで10年分のレースデータを収集して、そのデータで訓練したモデルを使って、単勝馬番を予想します。レース30分前、WEBサイトに公開します。Android版はWebAPIを使ってWEBサーバにHTTPリクエストします。 
+【使用言語】PHP、JavaScrip、Python、Kotlin 
+【機械学習に使ったフレームワーク】LightGBM 
+【サーバ構築】AWS EC2 Linuxインスタンス 
 
 ### こだわったポイント
 去年一年間のレースシミュレーション結果、回収率116％。
-
 自動購入スクリプト使って、予測から馬券購入まで全部自動ので、パソコン前の拘束時間かからないです。
 
 ### サイトリンク
@@ -12,10 +14,8 @@ WEBスクレイピンで10年分のレースデータを収集して、そのデ
 
 ## 開発環境
 ### 開発環境
-Anaconda
-
-Jupyter Notebook
-
+Anaconda 
+Jupyter Notebook 
 Visual Studio Code
 
 ### 開発言語
@@ -23,7 +23,6 @@ Python、PHP、JavaScript、Mysql、Kotlin
 
 ### 使用フレームワーク
 機械学習：LightGBM
-
 WEB：jQuery、Bootstrap
 
 ### インフラ構築
