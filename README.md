@@ -1,6 +1,7 @@
 # 競馬予想AI
 ### 作品概要
 WEBスクレイピンで10年分のレースデータを収集して、そのデータで訓練したモデルを使って、単勝馬番を予想します。レース30分前、WEBサイトに公開します。Android版はWebAPIを使ってWEBサーバにHTTPリクエストします。  
+
 【使用言語】PHP、JavaScrip、Python、Kotlin  
 【機械学習に使ったフレームワーク】LightGBM  
 【サーバ構築】AWS EC2 Linuxインスタンス  
