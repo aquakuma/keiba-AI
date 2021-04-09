@@ -96,8 +96,9 @@ function init($pdo){
         $ouput[$index]['week']= $record["week"];
 
         $index++;
+        
     }
-
+    
     //jsonとして出力
     header('Content-type: application/json');
     echo json_encode($ouput,JSON_UNESCAPED_UNICODE, JSON_HEX_TAG | JSON_HEX_AMP | JSON_HEX_APOS | JSON_HEX_QUOT);
@@ -161,8 +162,8 @@ function racecourse($pdo,$date){
 
 //予測レース表示
 function predict_show($pdo){
-    //$sql = "select race_id,racecourse,race_title,round,DATE_FORMAT(time, '%H:%i') as start,total_horse,pre_num,reliability,cre_dif,limen,odds from predict where time > now() ORDER BY time";
-    $sql = "select race_id,racecourse,race_title,round,DATE_FORMAT(time, '%H:%i') as start,total_horse,pre_num,reliability,cre_dif,limen,odds from predict LIMIT 4";
+    $sql = "select race_id,racecourse,race_title,round,DATE_FORMAT(time, '%H:%i') as start,total_horse,pre_num,reliability,cre_dif,limen,odds from predict where time > now() ORDER BY time";
+    //$sql = "select race_id,racecourse,race_title,round,DATE_FORMAT(time, '%H:%i') as start,total_horse,pre_num,reliability,cre_dif,limen,odds from predict LIMIT 4";
     $dbh = $pdo->query($sql);
 
     $index = 0;

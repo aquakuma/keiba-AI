@@ -4,15 +4,15 @@
     $jsonInput = json_decode(fgets($handle),JSON_UNESCAPED_UNICODE, JSON_HEX_TAG | JSON_HEX_AMP | JSON_HEX_APOS | JSON_HEX_QUOT);
     //$ouput['debug'] = 'successful'.$jsonInput['push'];
 
-    $$mode = "";
+    $mode = "";
     if(isset($jsonInput['mode'])){
         $mode = $jsonInput['mode'];
     }
     
 
-    require_once('../db/keiba.php');
+    #require_once('../db/keiba.php');
 
-    $pdo = new PDO(DSN, DB_USER, DB_PASSWORD);
+    $pdo = new PDO("mysql:host=localhost;dbname=keiba;charset=utf8mb4", "root", "Pigburger_17");
     //PDOの設定変更（エラー黙殺→例外発生）
     $pdo->setAttribute(
         PDO::ATTR_ERRMODE,          //3
@@ -239,11 +239,12 @@
     //予測レース表示
     function predict($pdo){
         $sql = "select race_id,racecourse,race_title,first,round,DATE_FORMAT(time, '%H:%i') as start,total_horse,pre_num,reliability,cre_dif,limen,odds from predict where time > now() ORDER BY time";
-        //$sql = "select race_id,racecourse,race_title,first,round,DATE_FORMAT(time, '%H:%i') as start,total_horse,pre_num,reliability,cre_dif,limen,odds from predict limit 16";
+        //$sql = "select race_id,racecourse,race_title,first,round,DATE_FORMAT(time, '%H:%i') as start,total_horse,pre_num,reliability,cre_dif,limen,odds from predict limit 16;";
 
         $dbh = $pdo->query($sql);
 
         $index = 0;
+        $ouput = array();
 
         while($record = $dbh->fetch(PDO::FETCH_ASSOC)){
             //インスタンスのみ→PDO::FETCH_NUM
