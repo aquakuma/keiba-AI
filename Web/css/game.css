@@ -1,0 +1,113 @@
+.box{
+    position: relative;
+    width: 1000px;
+    height: 651px;
+
+}
+
+.main{
+    width: 1000px;
+
+    margin: 50px auto;
+
+}
+
+#bg{
+    position: absolute;
+    object-fit: cover;
+
+    object-position : 0%;
+    z-index: 1;
+    width: 1000px;
+    height: 651px;
+
+}
+.santa{
+    width: 200px;
+    height: auto;
+    position: absolute;
+    left:0px;
+}
+
+#no1{
+    z-index: 10;
+    bottom: 95px;
+}
+#no2{
+    z-index: 11;
+    bottom: 80px;
+}
+#no3{
+    z-index: 12;
+    bottom: 75px;
+}
+#no4{
+    z-index: 13;
+    bottom: 60px;
+}
+#no5{
+    z-index: 14;
+    bottom: 45px;
+}
+#no6{
+    z-index: 15;
+    bottom: 30px;
+}
+#no7{
+    z-index: 16;
+    bottom: 15px;
+}
+#no8{
+    z-index: 17;
+    bottom: 0px;
+}
+
+.tree{
+    height: 400px;
+    width: auto;
+    z-index: 22;
+    bottom: 140px;
+    left: 950px;
+    position: absolute;
+    display: none;
+}
+
+
+
+.syotuba{
+    text-align: center;
+    
+}
+
+.syotuba div{
+    display: inline-block;
+    text-align: left;
+    margin-left: 40px;
+    margin-right: 40px;
+    vertical-align: top;
+}
+
+
+.syotuba div table{
+    margin: 0 auto;
+}
+
+.score{
+    display: inline-block;
+}
+
+.bat_bar{
+    margin: 0 auto;
+    text-align: center;
+}
+.bat_table{
+    width: 400px;
+    display: inline-block;
+    text-align: left;
+}
+
+.buy_btn{
+    float: right; 
+    margin-right: 80px;
+}
+

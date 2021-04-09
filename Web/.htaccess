@@ -1,0 +1,19 @@
+# .php拡張子無しでアクセス
+RewriteEngine on
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}.php -f
+RewriteRule ^(.*)$ $1.php
+
+# .html拡張子無しでアクセス
+RewriteEngine on
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}.html -f
+RewriteRule ^(.*)$ $1.html
+
+RewriteEngine on
+RewriteCond %{THE_REQUEST} ^.*/index
+RewriteRule ^(.*)index.php$ http://localhost:8000/keiba/$1 [R=301,L]
+
+RewriteEngine on
+RewriteCond %{THE_REQUEST} ^.*/index
+RewriteRule ^(.*)index.html$ http://localhost:8000/keiba/$1 [R=301,L]
