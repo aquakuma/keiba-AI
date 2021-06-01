@@ -31,3 +31,4 @@ AWS EC2、ALB、Route53、AWS Certificate Manager
 - WEBサイト：レース30分前、予測結果をWEBサイトに公開する。
 - Androidアプリ：WEBAPI使って、WEBサイトの情報を公開する。
 - 馬券自動購入：API　seleniumでブラウザを自動操作で馬券購入。
+- 結果統計：直近一年勝率と回収率の統計結果をWEBサイトに表示する。
